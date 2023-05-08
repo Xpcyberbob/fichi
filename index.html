@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="accueil.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module">
+        import {Compte} from "./classg.js";
+        import {Session} from "./classg.js";
+        $(document).ready(function() {
+            $('#inscription').click(function() {
+                var firstnames = $('#firstnames').val();
+                var sirname = $('#sirname').val();
+                var birthdate = $('#birthdate').val();
+                var full_number = $('#full_number').val();
+                var phone = $('#phone').val();
+                var pays = $('#pays').val();
+                let compte=new Compte(firstnames,sirname,birthdate,full_number,phone,pays);
+                console.log(compte);
+                $.ajax({
+                    url: 'https://api-synbil.aldizexperttech.com/front/register',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data:JSON.stringify({
+                        firstnames: firstnames,
+                        sirname: sirname,
+                        birthdate: birthdate,
+                        full_number: full_number,
+                        phone: phone,
+                        pays: pays
+                    }),
+                    success: function(response) {
+                      console.log(response);
+                      $('#reponse').text(JSON.stringify(response));
+                    },
+                    error: function(xhr, status, error) {
+    
+                    }
+                });
+            });
+        });
+       
+    </script>
+</head>
+<body>
+    <header>
+        <div class="en-tete">
+            <div class="ig">
+                <h2 id="pro">PROJob</h2>
+            </div>
+            <div class="en-tete2">
+                <a href="accueill.html">Accueill</a>
+                <a href="login.html">Connexion</a>
+                <a href="#">A propos</a>
+                <a href="#">Contacts</a>
+            </div>
+            <div class="cell-phone">
+                <a href="#contacts" id="reference-contact"><img src="kisspng-telephone-logo-computer-icons-clip-art-phone-icon-5ac539f9da47f1.4822659315228748738941.png" alt="" id="cell"></a>
+            </div>
+        </div>
+    </header>
+    <div class="imginscri">
+        <h3  style="text-align: center;color: white;font-size:2em;font-weight: bolder;">Inscription</h3>
+    <form id="form">
+        <fieldset>
+            <input type="text" id="firstnames" placeholder="Firstnames*"><br>
+            <input type="text" id="sirname" placeholder=Sirname*><br>
+            <input type="text" id="birthdate" placeholder="Date de naissance*"><br>
+            <input type="text" id="full_number" placeholder="Numero_Complet*"><br>
+            <input type="text" id="phone" placeholder="Téléphone*"><br>
+            <input type="text" id="pays" placeholder="Pays*">
+            <input type="button" value="S'inscrire" id="inscription">
+        </fieldset>
+    </form>
+    <div class="rep">
+    <h3>Reponse:</h3>
+    <p id="reponse">
+
+    </p>
+    </div>
+    </div>
+    <footer><hr>
+        <div class="foot-general">
+            <div class="foot">
+                <a href="#">Mentions Legales</a>
+                <a href="#">Réglementations</a>
+                <a href="#">Merci de nous faire confiance</a>
+            </div>
+            <div class="faxe">
+             <a href="http://www.gmail.com" target="_blank">Email:projob@gmail.com</a>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>

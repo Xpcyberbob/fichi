@@ -1,0 +1,44 @@
+/* Styling for the login form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.login{
+  background-image: url("coding-g5b89ed8b6_1280.jpg");
+  height:15cm;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -2%;
+}
+
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#tb{
+  background-color: aqua;
+  height: 5vh;
+  font-size: larger;
+}
+
+button[type="submit"] {
+  background-color: #2c6aee;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+a {
+  color: rgb(253, 253, 254);
+  text-decoration: none;
+  font-size:16px;
+  font-weight: 700;
+}

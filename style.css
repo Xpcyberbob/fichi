@@ -1,0 +1,72 @@
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #f4e0e0;
+}
+.imginscri{
+  margin-top: -2%;
+  background-image:url("hd-wallpaper-g82ab0dfaf_1280.jpg");
+  height: 16cm;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+button[type="submit"],
+input[type="button"] {
+  background-color: #142048;
+  color: #fff;
+  padding:2px 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight:700;
+  text-align: center;
+  width: 3cm;
+  height: 1cm;
+}
+
+button[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #105ae3;
+}
+
+#error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+.rep{
+  color:white;
+  width: 70%;
+}
+#reponse{
+  font-size:150x;
+  color: white;
+  
+}
+.access{
+  width: 50%;
+  height: 25vh;
+}

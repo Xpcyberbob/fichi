@@ -1,0 +1,94 @@
+*{
+ margin-left:0;
+ margin-right:0;
+}
+.en-tete{
+    margin-top: -1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(8, 8, 59, 0.761);
+}
+
+.cell-phone img{
+    max-height:5vh;
+    margin-right:1rem;
+}
+.en-tete2{
+     margin-left:55%;
+}
+.en-tete2 a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+#pro{
+    color: white;
+    margin-left:10%;
+    font-family: cursive;
+    text-overflow: clip;
+    text-decoration: overline;
+    text-shadow: 2cap;
+}
+
+.paragraphe{
+    text-align: center;
+}
+.postuler{
+    display: flex;
+    padding: 1rem;
+}
+.foot{
+    height:0.5cm;
+}
+#tiret{
+    text-align: center;
+    font-weight: 600;
+    color: rgb(7, 7, 105);
+
+}
+.avertissement{
+    text-align: center;
+    
+}
+
+.text-recruter{
+    margin-left: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text-post{
+    margin-left: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.foot a{
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.recruter{
+    display: flex;
+    padding: 1rem;
+}
+.img{
+    background-image: url("students-g0bae2b16a_1280.jpg");
+    min-height: 110vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.image-post img{
+    height:8cm;
+}
+.image-recruter img{
+    width:12cm;
+}
+.foot-general{
+    display: flex;
+    justify-content: space-around;
+    background-color:rgba(8, 8, 59, 0.761);
+    align-content: center;
+}
+.faxe a{
+    color: white;
+}

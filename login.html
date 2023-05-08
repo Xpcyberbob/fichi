@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="login.css"><link rel="stylesheet" href="accueil.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>git 
+ $(document).ready(function() {
+  $('#form').submit(function() {
+    event.preventDefault(); 
+    var login = $('#login').val();
+    var passe= $('#passe').val();
+    
+    $.ajax({
+      url: 'https://api-synbil.aldizexperttech.com/front/login',
+      type: 'POST',
+      data:JSON.stringify({
+        login: login,
+        passe: passe
+      }),
+      success: function(response) {
+        console.log(response);
+        alert("Access Granted")
+        setTimeout(function() {
+        window.location.href="dashboard.html";
+         }, 1000);
+       
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+        alert("La connexion a echoué !");
+      }
+    });
+  });
+});
+
+
+</script>
+</head>
+<body>
+  <header>
+    <div class="en-tete">
+        <div class="ig">
+            <h2 id="pro">PROJob</h2>
+        </div>
+        <div class="en-tete2">
+            <a href="accueill.html">Accueill</a>
+            <a href="login.html">Connexion</a>
+            <a href="#">A propos</a>
+            <a href="#">Contacts</a>
+        </div>
+        <div class="cell-phone">
+            <a href="#contacts" id="reference-contact"><img src="kisspng-telephone-logo-computer-icons-clip-art-phone-icon-5ac539f9da47f1.4822659315228748738941.png" alt="" id="cell"></a>
+        </div>
+    </div>
+</header>
+  <div class="login">
+    <p style="text-align: center;color:white;padding-top:10%;font-weight: 600;font-size:1.5em;">Connexion</p>
+    <form action="" id="form">
+        <input type="text" name="email" id="login" placeholder="login"><br><br>
+        <input type="password" name="password" id="passe" placeholder="password"><br><br>
+        <button type="submit" id="submit">Login</button>
+        <a href="index.html">Vous n'avez pas de compte ? Inscrivez-vous !</a>
+ 
+    </form>
+  </div>
+  <footer><hr>
+    <div class="foot-general">
+        <div class="foot">
+            <a href="#">Mentions Legales</a>
+            <a href="#">Réglementations</a>
+            <a href="#">Merci de nous faire confiance</a>
+        </div>
+        <div class="faxe">
+         <a href="http://www.gmail.com" target="_blank">Email:projob@gmail.com</a>
+        </div>
+    </div>
+    
+</footer>
+ 
+</body>
+
+</html>
